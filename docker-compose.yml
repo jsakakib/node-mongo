@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    image: jsakakib/node-mongo
+    ports:
+      - '80:3000'
+    networks:
+      - web_net
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+    networks:
+      - web_net
+
+networks: 
+  web_net:
